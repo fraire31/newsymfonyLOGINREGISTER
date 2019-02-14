@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %} {% block title %}Hello LoginController!{%
+endblock %} {% block body %}
+
+<div class="bg-dark" style="color:white; overflow:hidden; padding: 10px 200px;">
+  {% if app.user %}
+  <a href="{{ path('logout') }}" style="color:white;">Logout</a>
+  {% else %}
+  <a href="{{ path('login') }}" class="white">Log in</a>
+
+  <a href="{{ path('registerHere') }}" style="color:white; float:right;"
+    >Register</a
+  >
+  {% endif %}
+</div>
+<h1 class="green">welcome to this program</h1>
+<h3>you can login or register</h3>
+
+{% endblock %}
